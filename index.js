@@ -43,7 +43,7 @@ function toObserv(model) {
             listener(serialize(model));
         });
     };
-    ;['get', 'set', 'save', 'destroy', 'toJSON', 'isValid'].forEach(function(method) {
+    ;['get', 'set', 'fetch', 'save', 'destroy', 'toJSON', 'isValid'].forEach(function(method) {
       observ[method] = model[method].bind(model)
     })
     return observ
