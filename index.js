@@ -46,6 +46,7 @@ function toObserv(model) {
     ;['get', 'set', 'fetch', 'save', 'destroy', 'toJSON', 'isValid'].forEach(function(method) {
       observ[method] = model[method].bind(model)
     })
+    observ.backboneModel = model
     return observ
 }
 
